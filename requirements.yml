@@ -1,0 +1,15 @@
+- name: ansible-role-base
+  src: https://github.com/devops/ansible-role-base.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-base
+
+- name: ansible-role-sshd
+  src: https://github.com/devops/ansible-role-sshd.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-sshd
+
+- name: ansible-role-mysql
+  src: https://github.com/devops/ansible-role-mysql.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-mysql
+
