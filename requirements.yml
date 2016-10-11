@@ -13,3 +13,67 @@
   scm: git
   path: /data/ansible/roles/ansible-role-mysql
 
+- name: ansible-role-tomcat7
+  src: https://github.com/devops/ansible-role-tomcat7.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-tomcat7
+
+- name: ansible-role-rabbitmq
+  src: https://github.com/devops/ansible-role-rabbitmq.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-rabbitmq
+
+- name: ansible-role-haproxy
+  src: https://github.com/devops/ansible-role-haproxy.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-haproxy
+
+- name: ansible-role-chrony
+  src: https://github.com/devops/ansible-role-chrony.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-chrony
+
+- name: ansible-role-elasticsearch
+  src: https://github.com/devops/ansible-role-elasticsearch.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-elasticsearch
+
+- name: ansible-role-influxdb
+  src: https://github.com/devops/ansible-role-influxdb.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-influxdb
+
+- name: ansible-role-memcached
+  src: https://github.com/devops/ansible-role-memcached.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-memcached
+
+- name: ansible-role-network
+  src: https://github.com/devops/ansible-role-network.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-network
+
+- name: ansible-role-repo-lan
+  src: https://github.com/devops/ansible-role-repo-lan.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-repo-lan
+
+- name: ansible-role-repo-epel
+  src: https://github.com/devops/ansible-role-repo-epel.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-repo-epel
+
+- name: ansible-role-ntpd
+  src: https://github.com/devops/ansible-role-ntpd.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-ntpd
+
+- name: ansible-role-ntp
+  src: https://github.com/devops/ansible-role-ntp.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-ntp
+
+- name: ansible-role-nfs
+  src: https://github.com/devops/ansible-role-nfs.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-nfs
