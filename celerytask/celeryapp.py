@@ -6,8 +6,8 @@ from app import config
 
 
 app = Celery('celerytask',
-             broker=config.MONGO_URI,
-             backend=config.MONGO_URI,
+             broker=config.CELERY_BROKER,
+             backend=config.CELERY_BACKEND,
              include=["celerytask.tasks"]
              )
 

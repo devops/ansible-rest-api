@@ -11,3 +11,6 @@ MONGO_NAME = "ansible"
 MONGO_USER = "ansible"
 MONGO_PASSWORD = "ansible"
 MONGO_URI = "mongodb://%s:%s@%s:%d/%s" % (MONGO_USER, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_NAME)
+
+CELERY_BROKER = "sqla+sqlite:///celery_db.sqlite"
+CELERY_BACKEND = "db+sqlite:///celery_db.sqlite"

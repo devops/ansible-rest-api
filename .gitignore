@@ -92,3 +92,7 @@ ENV/
 
 # Mac
 .DS_Store
+
+# Develop database
+*.sqlite
+
