@@ -77,3 +77,8 @@
   src: https://github.com/devops/ansible-role-nfs.git
   scm: git
   path: /data/ansible/roles/ansible-role-nfs
+
+- name: ansible-role-jboss
+  src: https://github.com/devops/ansible-role-jboss.git
+  scm: git
+  path: /data/ansible/roles/ansible-role-jboss
