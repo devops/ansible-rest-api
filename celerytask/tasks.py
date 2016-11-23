@@ -8,7 +8,8 @@ from ansible.inventory import Inventory
 from ansible.playbook.play import Play
 from ansible.executor.task_queue_manager import TaskQueueManager
 from ansible.executor.playbook_executor import PlaybookExecutor
-from ansible.plugins.callback.json import CallbackModule
+#from ansible.plugins.callback.json import CallbackModule
+from celerytask.stats_json import CallbackModule
 
 from celerytask.celeryapp import app
 
@@ -89,6 +90,6 @@ def ansible_playbook(playbook, host_list, module_path, passwords=None):
                                 options=options)
         pbex._tqm._stdout_callback = CallbackModule()
         result_code = pbex.run()
-        return dict(retcode=result_code, results=pbex._tqm._stdout_callback.results)
+        return dict(retcode=result_code, plays=pbex._tqm._stdout_callback.results, stats=pbex._tqm._stdout_callback.stats)
     except Exception as e:
         raise Exception(e)
