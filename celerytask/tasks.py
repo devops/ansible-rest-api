@@ -7,10 +7,11 @@ from ansible.vars import VariableManager
 from ansible.inventory import Inventory
 from ansible.playbook.play import Play
 from ansible.executor.task_queue_manager import TaskQueueManager
-#from ansible.executor.playbook_executor import PlaybookExecutor
+from ansible.executor.playbook_executor import PlaybookExecutor
+from ansible.plugins.callback.json import CallbackModule
 
 from celerytask.celeryapp import app
-from celerytask.playbook_executor import PlaybookExecutor
+
 
 @app.task()
 def ansible_adhoc(host_list, module_name, module_args, pattern, play_name=None, passwords=None, forks=5):
@@ -86,6 +87,7 @@ def ansible_playbook(playbook, host_list, module_path, passwords=None):
                                 loader=loader,
                                 passwords=passwords,
                                 options=options)
+        pbex._tqm._stdout_callback = CallbackModule()
         result_code = pbex.run()
         return dict(retcode=result_code, results=pbex._tqm._stdout_callback.results)
     except Exception as e:
