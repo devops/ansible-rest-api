@@ -32,7 +32,7 @@ def ansible_adhoc(host_list, module_name, module_args, pattern, play_name=None, 
                         )
     options = Options(remote_user='root', forks=10, become_method='sudo', become_user='root', listhosts=False,
                       listtasks=False, listtags=False, syntax=False, module_path=None, become=True, check=False,
-                      verbosity=True, connection='smart', private_key_file=None, host_key_checking=False)
+                      verbosity=False, connection='smart', private_key_file=None, host_key_checking=False)
 
     # variable_manager.extra_vars={"ansible_ssh_user":"root" , "ansible_ssh_pass":"password"}
     passwords = passwords
@@ -76,7 +76,7 @@ def ansible_playbook(playbook, host_list, module_path, passwords=None):
                           'host_key_checking'])
     options = Options(remote_user='root', forks=10, become_method='sudo', become_user='root', listhosts=False,
                       listtasks=False, listtags=False, syntax=False, module_path=None, become=True, check=False,
-                      verbosity=True, connection='smart', private_key_file=None, host_key_checking=False)
+                      verbosity=False, connection='smart', private_key_file=None, host_key_checking=False)
 
     # variable_manager.extra_vars={"ansible_ssh_user":"root" , "ansible_ssh_pass":"password"}
     passwords = passwords
